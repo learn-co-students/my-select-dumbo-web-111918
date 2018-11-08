@@ -1,3 +1,10 @@
 def my_select(collection)
- # your code here!
+  collect = []
+
+collection.each do |value|
+  if yield(value)
+    collect << value
+  end
+end
+  collect
 end
